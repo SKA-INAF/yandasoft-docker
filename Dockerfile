@@ -41,11 +41,7 @@ RUN rm WSRT_Measures.tar
 RUN mkdir /var/lib/jenkins
 RUN mkdir /var/lib/jenkins/workspace
 WORKDIR /home
-RUN git clone https://ord006@bitbucket.csiro.au/scm/askapsdp/yandasoft.git
+RUN git clone https://ord006@bitbucket.csiro.au/scm/askapsdp/yandasoft.git 
 WORKDIR /home/yandasoft
-
-RUN ./build_all.sh -a -y -C "-DDATA_DIR=/usr/local/share/casacore/data" 
-
-
-
+RUN ./build_all.sh -C "-DDATA_DIR=/usr/local/share/casacore/data" -r -a -y
 
