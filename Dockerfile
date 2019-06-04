@@ -44,9 +44,7 @@ WORKDIR /home
 RUN git clone https://ord006@bitbucket.csiro.au/scm/askapsdp/yandasoft.git
 WORKDIR /home/yandasoft
 
-RUN git checkout 'master@{2019-05-24 10:00:00}'
-
-RUN ./build_all.sh -C "-DDATA_DIR=/usr/local/share/casacore/data" -a -y
+RUN ./build_all.sh -a -y -C "-DDATA_DIR=/usr/local/share/casacore/data" 
 
 
 
